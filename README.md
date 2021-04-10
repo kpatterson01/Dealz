@@ -1,5 +1,6 @@
 # Dealz
 Programmers: Dylan Scott and Kayla Patterson 
+
 Programming Language: Swift 
 
 See Design Doc here https://docs.google.com/document/d/16A0gD45MP0m6BnrRz3ve-6rdbGBD0jJwHuVkjEelL3s/edit?usp=sharing 
