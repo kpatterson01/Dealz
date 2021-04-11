@@ -1,0 +1,6 @@
+framework module Pods_Dealz {
+  umbrella header "Pods-Dealz-umbrella.h"
+
+  export *
+  module * { export * }
+}
