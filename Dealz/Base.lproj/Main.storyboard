@@ -84,9 +84,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BGg-Ef-FCo" kind="show" id="XGf-tY-OTN"/>
+                                    <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQO-eQ-o9P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOV-ec-88k">
+                                <rect key="frame" x="38" y="481" width="340" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -97,7 +104,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="SUo-eh-bdh"/>
                     <connections>
+                        <outlet property="emailTxt" destination="i67-vt-Joc" id="uAJ-4G-4gv"/>
+                        <outlet property="errorLabel" destination="wOV-ec-88k" id="ZOl-Kw-dxf"/>
                         <outlet property="logIn" destination="Qaa-8a-ych" id="WfA-FK-pQc"/>
+                        <outlet property="passwordTxt" destination="JTE-kp-u2u" id="Bal-3o-vSp"/>
                         <outlet property="signUp" destination="nRh-bc-qzo" id="zkj-e5-6eI"/>
                     </connections>
                 </viewController>
@@ -119,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awh-gt-2jc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="-122"/>
+            <point key="canvasLocation" x="2026" y="-207"/>
         </scene>
         <!--Item-->
         <scene sceneID="dvY-mA-GY9">
@@ -214,7 +224,7 @@
                                     <action selector="signUpPressed:" destination="eDJ-Zm-V4W" eventType="touchUpInside" id="WNK-Is-KYc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjN-Nc-hCi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjN-Nc-hCi">
                                 <rect key="frame" x="42" y="534" width="308" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -247,21 +257,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Dealz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8T-F3-jEf">
-                                <rect key="frame" x="138" y="107" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" text="" placeholder="Search Restaurants " translatesAutoresizingMaskIntoConstraints="NO" id="mHg-W6-SEZ">
+                                <rect key="frame" x="0.0" y="122" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vwg-Fq-nTC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" prompt="Welcome to Dealz" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="D5g-Wh-tCz">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="aAX-3j-T9S"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRR-JB-R0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.521739130435" y="1264.9553571428571"/>
+            <point key="canvasLocation" x="4165" y="1347"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hrq-nu-luW">
+            <objects>
+                <navigationController id="J9i-ah-8Jn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZG-kY-5VB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fNj-K3-qyp" kind="show" id="oeZ-V6-PQC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9I-mk-H0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3303" y="1347"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02o-Wg-XMU">
