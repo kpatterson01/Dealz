@@ -17,8 +17,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        logIn.layer.cornerRadius = 20
-        signUp.layer.cornerRadius = 20
+        logIn.layer.cornerRadius = 30
+        signUp.layer.cornerRadius = 30
+        Styling.styleButton(signUp)
+        
     }
     
    // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
