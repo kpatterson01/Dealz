@@ -68,7 +68,7 @@
 				4D9CFB82262003A400D85194 /* Dealz.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		4D9CFB84262003A400D85194 /* Dealz */ = {
 			isa = PBXGroup;
