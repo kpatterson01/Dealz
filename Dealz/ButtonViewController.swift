@@ -1,17 +1,17 @@
 //
-//  HomeViewController.swift
+//  ButtonViewController.swift
 //  Dealz
 //
-//  Created by Kayla Patterson on 4/10/21.
+//  Created by Dylan Scott on 4/17/21.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ButtonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Dealz"
+        title = "Button"
         // Do any additional setup after loading the view.
     }
     

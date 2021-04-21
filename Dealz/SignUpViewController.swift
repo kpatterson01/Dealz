@@ -91,6 +91,7 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     //Transition to home page of Dealz
+                    HomeViewController =
                     self.transitionToHome()
                     
                 }

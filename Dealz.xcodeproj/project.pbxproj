@@ -19,6 +19,8 @@
 		4D9CFB8D262003A400D85194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CFB8B262003A400D85194 /* Main.storyboard */; };
 		4D9CFB8F262003A600D85194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CFB8E262003A600D85194 /* Assets.xcassets */; };
 		4D9CFB92262003A600D85194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CFB90262003A600D85194 /* LaunchScreen.storyboard */; };
+		590545E0262B5FBB00834194 /* RestuarauntsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590545DF262B5FBB00834194 /* RestuarauntsViewController.swift */; };
+		590545E3262B5FDC00834194 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590545E2262B5FDC00834194 /* ButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		4D9CFB8E262003A600D85194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9CFB91262003A600D85194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D9CFB93262003A600D85194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590545DF262B5FBB00834194 /* RestuarauntsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarauntsViewController.swift; sourceTree = "<group>"; };
+		590545E2262B5FDC00834194 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		B5488E19135EB87BB2CFA96C /* Pods-Dealz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealz.debug.xcconfig"; path = "Target Support Files/Pods-Dealz/Pods-Dealz.debug.xcconfig"; sourceTree = "<group>"; };
 		BFE82E9A158754D41516E67D /* Pods-Dealz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealz.release.xcconfig"; path = "Target Support Files/Pods-Dealz/Pods-Dealz.release.xcconfig"; sourceTree = "<group>"; };
 		C33C39BB2EDE3C6DBCDF8F9F /* Pods_Dealz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,8 @@
 				4D9CFB87262003A400D85194 /* SceneDelegate.swift */,
 				4D9CFB89262003A400D85194 /* ViewController.swift */,
 				4D9CFB8B262003A400D85194 /* Main.storyboard */,
+				590545E2262B5FDC00834194 /* ButtonViewController.swift */,
+				590545DF262B5FBB00834194 /* RestuarauntsViewController.swift */,
 				4D9CFB8E262003A600D85194 /* Assets.xcassets */,
 				4D9CFB90262003A600D85194 /* LaunchScreen.storyboard */,
 				4D9CFB93262003A600D85194 /* Info.plist */,
@@ -222,11 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D76CB5D2622A1DD0085437C /* HomeViewController.swift in Sources */,
+				590545E3262B5FDC00834194 /* ButtonViewController.swift in Sources */,
 				4D9CFB8A262003A400D85194 /* ViewController.swift in Sources */,
 				4D76CB632622AC380085437C /* Styling.swift in Sources */,
 				4D9CFB86262003A400D85194 /* AppDelegate.swift in Sources */,
 				4D76CB45262288F00085437C /* SignUpViewController.swift in Sources */,
 				4D9CFB88262003A400D85194 /* SceneDelegate.swift in Sources */,
+				590545E0262B5FBB00834194 /* RestuarauntsViewController.swift in Sources */,
 				4D76CB602622A32D0085437C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
