@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Dealz
 //
-//  Created by Kayla Patterson on 4/8/21.
+//  Created on 4/8/21.
 //
 
 import UIKit
@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var signUp: UIButton!
     
+    @IBOutlet weak var btn: UIButton!
+    
     @IBOutlet weak var errorLabel: UILabel!
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +32,17 @@ class ViewController: UIViewController {
         Styling.styleButton(signUp)
         self.errorLabel.alpha = 0
         
+        
+        
     }
     
    // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     //    <#code#>
    // }
     
+    
+    
+    //we cant do this since it is disabled
     @IBAction func loginBtnPressed(_ sender: Any) {
         
         //create clean version of data
@@ -48,15 +56,15 @@ class ViewController: UIViewController {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             } else {
+                
                 let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
                 
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
             }
         }
-    }
     
-
+    }
 
 }
 
