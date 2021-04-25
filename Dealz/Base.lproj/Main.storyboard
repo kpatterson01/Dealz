@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dealz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" id="BYZ-38-t0r" customClass="ViewController" customModule="Dealz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,66 +250,45 @@
             </objects>
             <point key="canvasLocation" x="1718.840579710145" y="1245.5357142857142"/>
         </scene>
-        <!--Dealz-->
+        <!--Home View Controller-->
         <scene sceneID="fR1-yZ-Uwd">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" title="Dealz" id="fNj-K3-qyp" customClass="HomeViewController" customModule="Dealz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="fNj-K3-qyp" customClass="HomeViewController" customModule="Dealz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RNa-FS-9ZJ" customClass="hom">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-dD-fQH">
-                                <rect key="frame" x="57" y="71" width="86" height="50"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4RY-K9-nwR">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="20.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-Jq-BcW">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="20.5"/>
-                                                <state key="normal" title="Menu"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9N-lc-qoo">
-                                                <rect key="frame" x="43" y="0.0" width="43" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <searchBar contentMode="redraw" searchBarStyle="prominent" text="" placeholder="Search Restaurants " id="mHg-W6-SEZ">
-                                        <rect key="frame" x="0.0" y="21" width="86" height="9"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCX-Dk-KP6">
-                                        <rect key="frame" x="0.0" y="30" width="86" height="20"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="LLb-Ea-WeC" kind="show" id="UfO-8o-cmY"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bqQ-5r-DTw"/>
-                                </constraints>
-                            </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ifl-Q2-4er">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <imageReference key="backIndicatorTransitionMaskImage" image="square.and.arrow.down.fill" catalog="system" symbolScale="large"/>
+                                <items>
+                                    <navigationItem title="Dealz" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="IcT-bm-ALi">
+                                        <barButtonItem key="backBarButtonItem" title="Hello" id="ng3-nK-BhY"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" text="" placeholder="Search Restaurants " id="mHg-W6-SEZ">
+                                <rect key="frame" x="60" y="98" width="295" height="29"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Nu-xl-TL6">
+                                <rect key="frame" x="359" y="54" width="35" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vwg-Fq-nTC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7gW-dD-fQH" firstAttribute="top" secondItem="vwg-Fq-nTC" secondAttribute="top" constant="27" id="erq-3Z-fGj"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dealz" prompt="Welcome" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="D5g-Wh-tCz">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="aAX-3j-T9S"/>
-                    </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="menuBtn" destination="9Nu-xl-TL6" id="P5I-9F-qhg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRR-JB-R0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5073.913043478261" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="3269.5652173913045" y="1283.7053571428571"/>
         </scene>
         <!--Button-->
         <scene sceneID="F3g-bO-5Iz">
@@ -326,12 +306,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMa-Xp-6av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6023.188405797102" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="3968" y="1285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02o-Wg-XMU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8CM-Hd-KhF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="8CM-Hd-KhF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Esw-Xy-HlM">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -383,28 +363,12 @@
             </objects>
             <point key="canvasLocation" x="2733" y="-905"/>
         </scene>
-        <!--Dealz-->
-        <scene sceneID="PEE-Ej-Tb7">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zww-os-yot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="u1U-Ge-aVM" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Dealz" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="dky-aP-nWa"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o0i-LF-1vz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fNj-K3-qyp" kind="relationship" relationship="rootViewController" id="pmG-z4-d2M"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="4163.768115942029" y="1345.9821428571429"/>
-        </scene>
     </scenes>
     <resources>
         <image name="BackgroundIcon" width="1024" height="1024"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
