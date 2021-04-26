@@ -49,6 +49,8 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
     var headShot = UIImageView()
     var closeMenu = UILabel()
     
+    @IBOutlet weak var navBar: UINavigationBar!
+    
     @IBOutlet weak var menuBtn: UIImageView!
     
     override func viewDidLoad() {
@@ -58,6 +60,8 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         configureLocationManager()
         enableLocationServices()
         centerMapOnUserLocation()
+        
+        self.view.bringSubviewToFront(navBar)
         
         
         
