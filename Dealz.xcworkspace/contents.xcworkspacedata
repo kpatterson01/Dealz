@@ -5,6 +5,9 @@
       location = "container:Dealz.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

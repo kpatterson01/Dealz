@@ -6,8 +6,34 @@
 //
 
 import UIKit
+import MapKit
+import FloatingPanel
 
-class HomeViewController: UIViewController {
+
+
+
+
+class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
+    
+    //Mark: properties for MapKit
+    var mapView: MKMapView!
+    var locationManager: CLLocationManager!
+    
+    let centerMapButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "location-arrow-flat" )?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.addTarget(self, action: #selector(handleCenterOnUserLocation), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    
+    
+    //Mark: - Selectors
+    @objc func handleCenterOnUserLocation() {
+        centerMapOnUserLocation()
+    }
+    
     var sideMenu = UIImageView()
     var button = UIImageView()
     var sideMenu_isHidden = Bool()
@@ -28,8 +54,35 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configureMapView()
+        configureLocationManager()
+        enableLocationServices()
+        centerMapOnUserLocation()
+        
+        
+        
+        view.addSubview(centerMapButton)
+        centerMapButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -44).isActive = true
+        centerMapButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
+        centerMapButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        centerMapButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        centerMapButton.layer.cornerRadius = 50 / 2
+        centerMapButton.alpha = 1
+        
+        //fpc_content
+        let fpc = FloatingPanelController()
+        fpc.delegate = self
+        
+        guard let contentVC = storyboard?.instantiateViewController(identifier: "fpc_content") as? ContentViewController else {
+            return
+        }
+        
+        fpc.set(contentViewController: contentVC)
+        fpc.addPanel(toParent: self)
+        
         SetupButton()
         SideMenu()
+        
     }
     
 
@@ -152,4 +205,54 @@ class HomeViewController: UIViewController {
         } //end of if
     }
 
+    //Mark: Helpter Map Functions
+    
+    func configureMapView() {
+        mapView = MKMapView()
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
+        
+        view.addSubview(mapView)
+        mapView.frame = view.frame
+        
+    }
+    
+    func configureLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+    }
+    
+    func centerMapOnUserLocation() {
+        guard let coordinate = locationManager.location?.coordinate else { return }
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        mapView.setRegion(region, animated: true)
+    }
+}
+
+extension HomeViewController: CLLocationManagerDelegate {
+    
+    func enableLocationServices() {
+        
+        
+        switch CLLocationManager().authorizationStatus {
+        
+        case .notDetermined:
+            print("Location auth status is not determined..")
+            locationManager.requestWhenInUseAuthorization()
+        case.restricted:
+            print("Location auth status is restricted..")
+        case.denied:
+            print("Location auth status is denied..")
+        case.authorizedAlways:
+            print("Location auth status is authorized always..")
+        case.authorizedWhenInUse:
+            print("Location auth status is auth when in use..")
+        @unknown default:
+            fatalError()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        centerMapOnUserLocation()
+    }
 }

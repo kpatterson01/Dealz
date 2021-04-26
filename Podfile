@@ -12,4 +12,7 @@ target 'Dealz' do
     pod 'Firebase/Core'
     pod 'Firebase/Firestore'
 
+    # file for floating panel in maps
+    pod 'FloatingPanel'
+
 end
