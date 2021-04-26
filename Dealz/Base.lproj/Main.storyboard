@@ -285,6 +285,7 @@
                     <connections>
                         <outlet property="menuBtn" destination="9Nu-xl-TL6" id="P5I-9F-qhg"/>
                         <outlet property="navBar" destination="Ifl-Q2-4er" id="iEl-Bp-Z9e"/>
+                        <outlet property="searchBar" destination="mHg-W6-SEZ" id="aIY-ho-82B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRR-JB-R0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
