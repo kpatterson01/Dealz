@@ -50,6 +50,9 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
     var closeMenu = UILabel()
     
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
     
     @IBOutlet weak var menuBtn: UIImageView!
     
@@ -62,7 +65,7 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         centerMapOnUserLocation()
         
         self.view.bringSubviewToFront(navBar)
-        
+        self.view.bringSubviewToFront(searchBar)
         
         
         view.addSubview(centerMapButton)
