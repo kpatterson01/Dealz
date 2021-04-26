@@ -290,23 +290,35 @@
             </objects>
             <point key="canvasLocation" x="3269.5652173913045" y="1283.7053571428571"/>
         </scene>
-        <!--Button-->
-        <scene sceneID="F3g-bO-5Iz">
+        <!--Content View Controller-->
+        <scene sceneID="vyA-I2-jAH">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LLb-Ea-WeC" customClass="HomeViewController" customModule="Dealz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OJi-Sd-JRV">
+                <viewController storyboardIdentifier="fpc_content" id="jJu-Wx-zWm" customClass="ContentViewController" customModule="Dealz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="136-LK-evX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="eeS-EL-osP"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EIm-aU-jmL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I4K-V7-SOI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EIm-aU-jmL" firstAttribute="top" secondItem="I4K-V7-SOI" secondAttribute="top" id="BCs-bk-JLn"/>
+                            <constraint firstItem="I4K-V7-SOI" firstAttribute="trailing" secondItem="EIm-aU-jmL" secondAttribute="trailing" id="Q5p-yC-dOs"/>
+                            <constraint firstItem="EIm-aU-jmL" firstAttribute="leading" secondItem="I4K-V7-SOI" secondAttribute="leading" id="Rhj-QH-iak"/>
+                            <constraint firstItem="I4K-V7-SOI" firstAttribute="bottom" secondItem="EIm-aU-jmL" secondAttribute="bottom" id="eLk-29-3vD"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Button" largeTitleDisplayMode="always" id="8Me-T7-mSX">
-                        <barButtonItem key="backBarButtonItem" title="Dealz" id="nTd-Zo-teO"/>
-                    </navigationItem>
+                    <connections>
+                        <outlet property="myTableView" destination="EIm-aU-jmL" id="bXd-mY-nBa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aMa-Xp-6av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6K-5z-422" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3968" y="1285"/>
+            <point key="canvasLocation" x="4038" y="1284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02o-Wg-XMU">

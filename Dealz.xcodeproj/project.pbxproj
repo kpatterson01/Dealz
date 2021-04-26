@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48EC79CCDC149D8E3289F867 /* Pods_Dealz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33C39BB2EDE3C6DBCDF8F9F /* Pods_Dealz.framework */; };
+		06BC6FBDE0026E227A16878B /* Pods_Dealz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1FE78864355AC6E5BC72CD /* Pods_Dealz.framework */; };
 		4D47B9AB2622460600A41E10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D47B9AA2622460600A41E10 /* GoogleService-Info.plist */; };
 		4D76CB45262288F00085437C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CB44262288F00085437C /* SignUpViewController.swift */; };
 		4D76CB5D2622A1DD0085437C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CB5C2622A1DD0085437C /* HomeViewController.swift */; };
@@ -21,6 +21,7 @@
 		4D9CFB92262003A600D85194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CFB90262003A600D85194 /* LaunchScreen.storyboard */; };
 		590545E0262B5FBB00834194 /* RestuarauntsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590545DF262B5FBB00834194 /* RestuarauntsViewController.swift */; };
 		590545E3262B5FDC00834194 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590545E2262B5FDC00834194 /* ButtonViewController.swift */; };
+		59BCCC5326366BA200239812 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BCCC5226366BA200239812 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +38,12 @@
 		4D9CFB8E262003A600D85194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9CFB91262003A600D85194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D9CFB93262003A600D85194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F1FE78864355AC6E5BC72CD /* Pods_Dealz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590545DF262B5FBB00834194 /* RestuarauntsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestuarauntsViewController.swift; sourceTree = "<group>"; };
 		590545E2262B5FDC00834194 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
-		B5488E19135EB87BB2CFA96C /* Pods-Dealz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealz.debug.xcconfig"; path = "Target Support Files/Pods-Dealz/Pods-Dealz.debug.xcconfig"; sourceTree = "<group>"; };
-		BFE82E9A158754D41516E67D /* Pods-Dealz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealz.release.xcconfig"; path = "Target Support Files/Pods-Dealz/Pods-Dealz.release.xcconfig"; sourceTree = "<group>"; };
-		C33C39BB2EDE3C6DBCDF8F9F /* Pods_Dealz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59BCCC5226366BA200239812 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		AC099D1FC2216A822A6F3FF9 /* Pods-Dealz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealz.release.xcconfig"; path = "Target Support Files/Pods-Dealz/Pods-Dealz.release.xcconfig"; sourceTree = "<group>"; };
+		CB3F333F94BA7BC474F9FC46 /* Pods-Dealz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealz.debug.xcconfig"; path = "Target Support Files/Pods-Dealz/Pods-Dealz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48EC79CCDC149D8E3289F867 /* Pods_Dealz.framework in Frameworks */,
+				06BC6FBDE0026E227A16878B /* Pods_Dealz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +64,7 @@
 				4D9CFB84262003A400D85194 /* Dealz */,
 				4D9CFB83262003A400D85194 /* Products */,
 				56BC1C715205E36F7755537C /* Pods */,
-				62FAC6EB842E9246AF25845B /* Frameworks */,
+				9508265F38A089F26A52F200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +93,7 @@
 				4D76CB5C2622A1DD0085437C /* HomeViewController.swift */,
 				4D76CB5F2622A32C0085437C /* Constants.swift */,
 				4D76CB622622AC380085437C /* Styling.swift */,
+				59BCCC5226366BA200239812 /* ContentViewController.swift */,
 			);
 			path = Dealz;
 			sourceTree = "<group>";
@@ -98,16 +101,16 @@
 		56BC1C715205E36F7755537C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B5488E19135EB87BB2CFA96C /* Pods-Dealz.debug.xcconfig */,
-				BFE82E9A158754D41516E67D /* Pods-Dealz.release.xcconfig */,
+				CB3F333F94BA7BC474F9FC46 /* Pods-Dealz.debug.xcconfig */,
+				AC099D1FC2216A822A6F3FF9 /* Pods-Dealz.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		62FAC6EB842E9246AF25845B /* Frameworks */ = {
+		9508265F38A089F26A52F200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C33C39BB2EDE3C6DBCDF8F9F /* Pods_Dealz.framework */,
+				4F1FE78864355AC6E5BC72CD /* Pods_Dealz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,11 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9CFB96262003A600D85194 /* Build configuration list for PBXNativeTarget "Dealz" */;
 			buildPhases = (
-				5293850526E96E3786B995C4 /* [CP] Check Pods Manifest.lock */,
+				83FF88D6105490A72A425C4C /* [CP] Check Pods Manifest.lock */,
 				4D9CFB7E262003A400D85194 /* Sources */,
 				4D9CFB7F262003A400D85194 /* Frameworks */,
 				4D9CFB80262003A400D85194 /* Resources */,
-				8E2E00B8966825FBD8E8DE0F /* [CP] Embed Pods Frameworks */,
+				48C382E84FEE270A742CA040 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,7 +184,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5293850526E96E3786B995C4 /* [CP] Check Pods Manifest.lock */ = {
+		48C382E84FEE270A742CA040 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dealz/Pods-Dealz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dealz/Pods-Dealz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dealz/Pods-Dealz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83FF88D6105490A72A425C4C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,23 +223,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E2E00B8966825FBD8E8DE0F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dealz/Pods-Dealz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dealz/Pods-Dealz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dealz/Pods-Dealz-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BCCC5326366BA200239812 /* ContentViewController.swift in Sources */,
 				4D76CB5D2622A1DD0085437C /* HomeViewController.swift in Sources */,
 				590545E3262B5FDC00834194 /* ButtonViewController.swift in Sources */,
 				4D9CFB8A262003A400D85194 /* ViewController.swift in Sources */,
@@ -379,7 +383,7 @@
 		};
 		4D9CFB97262003A600D85194 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5488E19135EB87BB2CFA96C /* Pods-Dealz.debug.xcconfig */;
+			baseConfigurationReference = CB3F333F94BA7BC474F9FC46 /* Pods-Dealz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,7 +402,7 @@
 		};
 		4D9CFB98262003A600D85194 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFE82E9A158754D41516E67D /* Pods-Dealz.release.xcconfig */;
+			baseConfigurationReference = AC099D1FC2216A822A6F3FF9 /* Pods-Dealz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
