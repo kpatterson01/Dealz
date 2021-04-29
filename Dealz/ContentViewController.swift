@@ -13,21 +13,9 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     struct Restaurants {
         
         var locRestaurants: [String] = []
-        var resDealz = deals()
         
     }
     
-    struct deals {
-        
-        
-        var dealz: [String] = []
-        
-    }
-    
-    var mcdonaldsDealz = [ "Big mac meal 1.00",
-                           "20 Nuggets  5.00",
-                           "buy 1 sandwhich get 2 free 4.00"
-    ]
     
     lazy var data = [
         "Mcdonald's",
@@ -36,10 +24,15 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
         "Dunkin Donuts",
         "Pizza Hut",
         "Red Robin",
-        "Subway"
+        "Subway",
+        "Tropical Smoothie Cafe",
+        "Bajas",
+        "Panda Express",
+        "Sakura",
+        "Burger King"
     ]
     
-    lazy var R = Restaurants(locRestaurants: data, resDealz: deals(dealz: mcdonaldsDealz ))
+    lazy var R = Restaurants(locRestaurants: data)
     
 
     @IBOutlet var myTableView: UITableView!
@@ -75,7 +68,7 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     */
     
-    lazy var bc = ButtonViewController(items: R.resDealz.dealz)
+
     
     
     

@@ -7,50 +7,59 @@
 
 import UIKit
 
-class ButtonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ButtonViewController: UIViewController {
+    
+    
+    struct deals {
+        
+        
+        var dealz: [String] = []
+        
+    }
+    
+    var mcdonaldsDealz = [ "Big mac meal\t\t\t\t\t\t$1.00",
+                           "20 Nuggets\t\t\t\t\t\t$5.00",
+                           "buy 1 sandwhich get 2 free\t\t$4.00",
+                           "2 Apple pies\t\t\t\t\t\t$1.00",
+                           "1 Mcflurry\t\t\t\t\t\t\t$1.00",
+                           "Large Fry\t\t\t\t\t\t\t$1.00",
+                           "2 Crispy Chicken Sandwhiches\t$7.00",
+                           
+    ]
+    
+    lazy var mcdeal = deals(dealz: mcdonaldsDealz)
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return mcdeal.dealz.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row]
+        let cell = dealzTableView.dequeueReusableCell(withIdentifier: "dealzCell", for: indexPath)
+        cell.textLabel?.text = mcdeal.dealz[indexPath.row]
         return cell
+        
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        print(items[indexPath.row])
-    }
+    
+    @IBOutlet weak var dealzTableView: UITableView!
+    
+    
+    
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
+        dealzTableView.delegate = self
+        dealzTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
     
-    private let tableView: UITableView = {
-        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
     
     
     
-    //init
-    private let items: [String]
-    init(items: [String]) {
-        self.items = items
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+   
     
     
 
@@ -64,4 +73,10 @@ class ButtonViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     */
 
+}
+
+extension ButtonViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("YOU SELECTED A CELL")
+    }
 }
