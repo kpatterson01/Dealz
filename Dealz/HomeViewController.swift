@@ -47,7 +47,7 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
     
     var pref = UILabel()
     var headShot = UIImageView()
-    var closeMenu = UILabel()
+    
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -67,6 +67,7 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         self.view.bringSubviewToFront(navBar)
         self.view.bringSubviewToFront(searchBar)
         
+
         
         view.addSubview(centerMapButton)
         centerMapButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -44).isActive = true
@@ -86,9 +87,9 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         
         fpc.set(contentViewController: contentVC)
         fpc.addPanel(toParent: self)
-        
-        SetupButton()
-        SideMenu()
+         
+            SetupButton()
+            SideMenu()
         
     }
     
@@ -103,7 +104,7 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         //button.layer.cornerRadius = button.frame.height / 2
         //button.backgroundColor = UIColor.red
         view.insertSubview(menuBtn, at: 0)
-        view.bringSubviewToFront(menuBtn)
+        
     }
     
     
@@ -164,11 +165,7 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         view.insertSubview(setting, at: 1)
         view.bringSubviewToFront(setting)
         
-        closeMenu.frame = CGRect(origin: CGPoint(x: view.frame.width * 0.0, y: view.frame.height * 0.1), size: CGSize(width: view.frame.width / 2, height: view.frame.height+500))
-        closeMenu.text = "Close Menu"
-        closeMenu.textColor = UIColor.white
-        view.insertSubview(closeMenu, at: 2)
-        view.bringSubviewToFront(closeMenu)
+        
 
         
     }
@@ -234,6 +231,8 @@ class HomeViewController: UIViewController, FloatingPanelControllerDelegate {
         let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(region, animated: true)
     }
+    
+    
 }
 
 extension HomeViewController: CLLocationManagerDelegate {
@@ -262,4 +261,8 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         centerMapOnUserLocation()
     }
+    
+ 
 }
+
+

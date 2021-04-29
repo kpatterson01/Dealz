@@ -58,8 +58,12 @@ class ContentViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = R.locRestaurants[indexPath.row]
+        
+        
         return cell
     }
+    
+    
 
     /*
     // MARK: - Navigation
