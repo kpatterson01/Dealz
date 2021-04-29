@@ -110,9 +110,7 @@ class SignUpViewController: UIViewController {
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
         
-        let storyboard = UIStoryboard(name: "HomeVC", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeVC")
-            view.window?.rootViewController = initialViewController
+        
     }
     
 
